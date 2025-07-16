@@ -1,0 +1,45 @@
+# Homebrew Tap .gitignore
+
+# OS X
+.DS_Store
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~ 
+
+# Homebrew build artifacts
+*.dylib
+*.so
+*.a
+*.o
+*.log
+
+# Temporary files
+tmp/
+Temp/
+
+# Python virtual environments
+venv/
+.env
+
+# Go build artifacts
+bin/
+pkg/
+
+# npm dependencies
+node_modules/
+
+# Ignore formula bottle commits
+*.bottle.*
+
+# Ignore lock files
+Formula/.brew_homebrew-tap.lock
+
+# Ignore Caskroom
+Caskroom/
+
+# Ignore any local development files
+local/
