@@ -1,13 +1,13 @@
 cask "idev" do
-  version "0.0.1"
+  version "0.0.2"
 
   on_arm do
-    sha256 "4aec412073b9fcc5c8d3013d79c09f06c09a54d848a9b99ad9652689b0e9312e"
+    sha256 "sha256:52c739084c38437eeaa4c9a35630a9dff70d295a4b5f7a892878222b8822354a"
     url "https://github.com/magalab/idev/releases/download/v#{version}/idev-v#{version}-arm64.dmg"
   end
 
   on_intel do
-    sha256 "e4c7b9f68eaee21cfcd2e57fd9e626a08b5e55f5e1cd671f66f352e3e5fd68d0"
+    sha256 "sha256:9a84e6bbb1106dca672366b2ec79b33379add5140b94011d852bb4bb3f4304a0"
     url "https://github.com/magalab/idev/releases/download/v#{version}/idev-v#{version}-x86_64.dmg"
   end
   name "idev"
