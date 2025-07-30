@@ -1,6 +1,7 @@
 # Homebrew 仓库
 
 > Formula: 命令行工具、开发工具链、服务器软件
+
 > Casks: 图形界面应用程序
 
 这是一个自定义的 Homebrew 仓库，用于存放我个人的 Formula（配方）和 Casks（软件包）。
