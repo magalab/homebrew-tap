@@ -1,6 +1,6 @@
 cask "meow" do
-  version "0.0.7"
-  sha256 "2a9794d876edca1dff46377bcbae869c8f68565863a91b0d31d030b463a19262"
+  version "0.0.8"
+  sha256 "a49cc4a23cbf444e538eed1dfc240df04bae36497f6e0094adb6c50405907f51"
 
   url "https://github.com/magalab/meow/releases/download/v#{version}/Meow_#{version}_arm64.dmg"
   name "Meow"
