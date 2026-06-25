@@ -1,0 +1,32 @@
+name: brew audit
+
+on:
+  push:
+    paths:
+      - 'Casks/**'
+      - 'Formula/**'
+  pull_request:
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Audit casks
+        run: |
+          for cask in Casks/*.rb; do
+            echo "::group::Auditing $cask"
+            brew audit --cask "$cask"
+            echo "::endgroup::"
+          done
+
+      - name: Audit formulae
+        run: |
+          shopt -s nullglob
+          for formula in Formula/*.rb; do
+            echo "::group::Auditing $formula"
+            brew audit "$formula"
+            echo "::endgroup::"
+          done

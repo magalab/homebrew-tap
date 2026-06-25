@@ -1,11 +1,13 @@
-# Casks 目录
+# Casks
 
-本目录包含以下图形界面应用程序：
+Available casks in this tap:
 
-- [idev](idev.rb)：一些开发工具
-- [meow](meow.rb)：Meow 应用
+- [idev](idev.rb) — 一些开发工具
+- [meow](meow.rb) — Meow app for macOS
+- [miao](miao.rb) — Miao app for macOS
 
-### 安装软件包
+## Install
+
 ```bash
-brew install --cask <软件包名称>
+brew install --cask <cask-name>
 ```
