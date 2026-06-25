@@ -1,4 +1,4 @@
-name: brew audit
+name: brew audit (casks + formulae)
 
 on:
   push:
@@ -8,7 +8,8 @@ on:
   pull_request:
 
 jobs:
-  audit:
+  audit-casks:
+    name: Audit casks
     runs-on: macos-latest
     steps:
       - name: Checkout
@@ -16,17 +17,39 @@ jobs:
 
       - name: Audit casks
         run: |
-          for cask in Casks/*.rb; do
+          shopt -s nullglob
+          casks=(Casks/*.rb)
+          if [ ${#casks[@]} -eq 0 ]; then
+            echo "No casks to audit"
+            exit 0
+          fi
+
+          for cask in "${casks[@]}"; do
+            cask_name="$(basename "$cask" .rb)"
             echo "::group::Auditing $cask"
-            brew audit --cask "$cask"
+            brew audit --cask --strict "$cask_name"
             echo "::endgroup::"
           done
+
+  audit-formulae:
+    name: Audit formulae
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Audit formulae
         run: |
           shopt -s nullglob
-          for formula in Formula/*.rb; do
+          formulae=(Formula/*.rb)
+          if [ ${#formulae[@]} -eq 0 ]; then
+            echo "No formulae to audit"
+            exit 0
+          fi
+
+          for formula in "${formulae[@]}"; do
+            formula_name="$(basename "$formula" .rb)"
             echo "::group::Auditing $formula"
-            brew audit "$formula"
+            brew audit --strict "$formula_name"
             echo "::endgroup::"
           done

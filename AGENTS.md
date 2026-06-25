@@ -10,13 +10,13 @@ This is a Homebrew third-party tap (`magalab/homebrew-tap`) distributing macOS G
 
 ```bash
 # Audit a cask for correctness
-brew audit --cask Casks/<name>.rb
+brew audit --cask --strict <name>
 
 # Install a cask locally for testing
-brew install --cask Casks/<name>.rb
+brew install --cask <name>
 
 # Check livecheck (version detection) works
-brew livecheck --cask Casks/<name>.rb
+brew livecheck --cask <name>
 
 # Fetch and verify the SHA256 of a new release
 curl -sL <release-dmg-url> | shasum -a 256
@@ -48,5 +48,5 @@ Each cask follows this pattern:
 1. Update `version` to the new tag (e.g. `"0.0.18"`)
 2. Download the new DMG from GitHub releases and compute its SHA256: `curl -sL <url> | shasum -a 256`
 3. Replace `sha256` with the new hash
-4. Run `brew audit --cask Casks/<name>.rb` to validate
+4. Run `brew audit --cask --strict <name>` to validate
 5. Commit with message: `update: bump <name> version to <version> and update sha256`
