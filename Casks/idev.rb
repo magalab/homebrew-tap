@@ -15,7 +15,7 @@ cask "idev" do
   homepage "https://github.com/magalab/idev"
 
   app "idev.app"
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
   livecheck do
     url :homepage
     regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)}i)
