@@ -1,8 +1,8 @@
 cask "miao" do
-  version "0.0.21"
-  sha256 "90333e22e6cf3517f3a376a72d028add39a859ef515bf223f20a5ce1b4cb4071"
+  version "0.0.22"
+  sha256 "a4b86c331ddecb9c70c035bde2890500824667f3e3b65b5b5d876f02af7a41e9"
 
-  url "https://github.com/magalab/meow/releases/download/v0.0.21/Miao_#{version}_arm64.dmg"
+  url "https://github.com/magalab/meow/releases/download/v0.0.22/Miao_#{version}_arm64.dmg"
   name "Miao"
   desc "Meow voice edition with offline speech recognition and speech synthesis"
   homepage "https://github.com/magalab/meow"
