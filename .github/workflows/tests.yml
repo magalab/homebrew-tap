@@ -5,49 +5,16 @@ on:
     paths:
       - 'Casks/**'
       - 'Formula/**'
+      - '.github/workflows/tests.yml'
   pull_request:
 
 jobs:
-  audit-casks:
-    name: Audit casks
+  audit:
+    name: Audit tap
     runs-on: macos-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
 
-      - name: Audit casks
-        run: |
-          shopt -s nullglob
-          casks=(Casks/*.rb)
-          if [ ${#casks[@]} -eq 0 ]; then
-            echo "No casks to audit"
-            exit 0
-          fi
-
-          for cask in "${casks[@]}"; do
-            echo "::group::Auditing $cask"
-            brew audit --cask --strict "$cask"
-            echo "::endgroup::"
-          done
-
-  audit-formulae:
-    name: Audit formulae
-    runs-on: macos-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Audit formulae
-        run: |
-          shopt -s nullglob
-          formulae=(Formula/*.rb)
-          if [ ${#formulae[@]} -eq 0 ]; then
-            echo "No formulae to audit"
-            exit 0
-          fi
-
-          for formula in "${formulae[@]}"; do
-            echo "::group::Auditing $formula"
-            brew audit --strict "$formula"
-            echo "::endgroup::"
-          done
+      - name: Audit tap syntax
+        run: brew test-bot --only-tap-syntax
