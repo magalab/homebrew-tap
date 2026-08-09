@@ -25,9 +25,8 @@ jobs:
           fi
 
           for cask in "${casks[@]}"; do
-            cask_name="$(basename "$cask" .rb)"
             echo "::group::Auditing $cask"
-            brew audit --cask --strict "$cask_name"
+            brew audit --cask --strict "$cask"
             echo "::endgroup::"
           done
 
@@ -48,8 +47,7 @@ jobs:
           fi
 
           for formula in "${formulae[@]}"; do
-            formula_name="$(basename "$formula" .rb)"
             echo "::group::Auditing $formula"
-            brew audit --strict "$formula_name"
+            brew audit --strict "$formula"
             echo "::endgroup::"
           done
