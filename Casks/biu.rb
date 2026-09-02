@@ -1,6 +1,6 @@
 cask "biu" do
-  version "0.2.0"
-  sha256 "4d4e95572b0edbfb9f2b0b0df4ec924bf6b0dec3e2981946315b543391cc0570"
+  version "0.2.1"
+  sha256 "154b4edff1eb3a5141033b6525b91fbddbaadf21fa77e5fc01f34d606ef792ca"
 
   url "https://github.com/magalab/biu/releases/download/v#{version}/Biu_#{version}_arm64.dmg"
   name "Biu"
