@@ -4,7 +4,7 @@ cask "tilde" do
 
   url "https://github.com/magalab/tilde/releases/download/v0.5.1/Tilde_#{version}_arm64.dmg"
   name "Tilde"
-  desc "Native macOS text editor for plain text and Markdown"
+  desc "Native text editor for plain text and Markdown"
   homepage "https://github.com/magalab/tilde"
 
   depends_on macos: :sequoia

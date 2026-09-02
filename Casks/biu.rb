@@ -4,7 +4,7 @@ cask "biu" do
 
   url "https://github.com/magalab/biu/releases/download/v#{version}/Biu_#{version}_arm64.dmg"
   name "Biu"
-  desc "Native, local-first REST client for macOS"
+  desc "Native, local-first REST client"
   homepage "https://github.com/magalab/biu"
 
   depends_on macos: :sequoia

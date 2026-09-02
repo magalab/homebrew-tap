@@ -4,7 +4,7 @@ cask "meow" do
 
   url "https://github.com/magalab/meow/releases/download/v0.0.26/Meow_#{version}_arm64.dmg"
   name "Meow"
-  desc "Lightweight macOS launcher with gadgets"
+  desc "Lightweight launcher with gadgets"
   homepage "https://github.com/magalab/meow"
 
   depends_on macos: :sequoia
