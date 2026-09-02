@@ -7,8 +7,13 @@ cask "alacritty" do
   desc "Fast, cross-platform, OpenGL terminal emulator"
   homepage "https://github.com/magalab/alacritty"
 
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)}i)
+  end
+
   depends_on arch: :arm64
-  depends_on macos: :sierra
+  depends_on :macos
 
   app "Alacritty.app"
   binary "Alacritty.app/Contents/MacOS/alacritty"
@@ -20,9 +25,4 @@ cask "alacritty" do
     "~/.config/alacritty",
     "~/Library/Saved Application State/org.alacritty.savedState",
   ]
-
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)}i)
-  end
 end
