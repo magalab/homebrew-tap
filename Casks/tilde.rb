@@ -1,8 +1,8 @@
 cask "tilde" do
-  version "0.5.1"
-  sha256 "8233ce863ba8fff53b64d94497e9988ded82a6a204f73445ba94aafa58042e70"
+  version "0.5.2"
+  sha256 "ee381f4fe451d8ab4732dd446b19ed4fda544975331948075a2ca56adc11051d"
 
-  url "https://github.com/magalab/tilde/releases/download/v0.5.1/Tilde_#{version}_arm64.dmg"
+  url "https://github.com/magalab/tilde/releases/download/v0.5.2/Tilde_#{version}_arm64.dmg"
   name "Tilde"
   desc "Native text editor for plain text and Markdown"
   homepage "https://github.com/magalab/tilde"
