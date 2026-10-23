@@ -4,7 +4,6 @@ class Zshx < Formula
   url "https://github.com/magalab/zshx.git",
       tag:      "v0.1.0",
       revision: "f1b4d45f6ce66288a10dab479fac44a7bb43363c"
-  version "0.1.0"
   license "MIT"
 
   def install
