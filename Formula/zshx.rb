@@ -1,9 +1,9 @@
 class Zshx < Formula
-  desc "Zsh syntax highlighting and asynchronous history suggestions"
+  desc "Zsh syntax highlighting and responsive history suggestions"
   homepage "https://github.com/magalab/zshx"
   url "https://github.com/magalab/zshx.git",
-      tag:      "v0.1.0",
-      revision: "f1b4d45f6ce66288a10dab479fac44a7bb43363c"
+      tag:      "v0.1.1",
+      revision: "ec4706d8f706c6eff097ddb51747286d10b9449d"
   license "MIT"
 
   def install
