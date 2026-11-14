@@ -1,6 +1,6 @@
 cask "winc" do
-  version "0.1.626"
-  sha256 "327e673dde2b3a72c9b68a30d7a839421d51e9cf72238edc813cdc76f28a6142"
+  version "0.1.688"
+  sha256 "73519cae4171c606964043c656cf2824b36c4547d009ef18a8f8fadae551bcf5"
 
   url "https://github.com/DEEIX-AI/Winc/releases/download/v#{version}/Winc-#{version}-macos-arm64.dmg"
   name "Winc"
