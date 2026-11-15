@@ -1,6 +1,6 @@
 cask "tilde" do
   version "0.5.3"
-  sha256 "60cfd5b0b41a58e4b52a87e1461cb4c1d657fce7da32d6cac5f3f1f564db617b"
+  sha256 "c8fcf6b073e59b2dc5d766645e822b7987e231d0e3eeaf24e7306f1fc022b31d"
 
   url "https://github.com/magalab/tilde/releases/download/v0.5.3/Tilde_#{version}_arm64.dmg"
   name "Tilde"
