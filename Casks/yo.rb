@@ -1,9 +1,9 @@
 cask "yo" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.2.1"
-  sha256 arm:   "fdd175926ca5d06f3b22733967ca730fe3f8ae1d8ccdcab3bd15606a73fa1def",
-         intel: "220eb7738fc7423eb5cb2713b6f0f31d6c1bf0dcf1ddcc01882584c358db5fe1"
+  version "1.2.2"
+  sha256 arm:   "636e129fdf93b10695d7fc693a94fc1c038307419af0ca80988723ec8a838daf",
+         intel: "1d35d815dcb330b807513418acc6ad99048d6f587e0f6312cc3d19150e27d773"
 
   url "https://github.com/magalab/yo/releases/download/v#{version}/Yo-#{arch}.dmg"
   name "Yo"
