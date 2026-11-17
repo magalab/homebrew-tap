@@ -11,4 +11,14 @@ cask "dbl" do
   depends_on macos: :sequoia
 
   app "DBL.app"
+
+  caveats <<~EOS
+    DBL uses an ad-hoc signature and is not notarized by Apple. On first launch,
+    macOS may block it. First allow DBL in System Settings > Privacy & Security.
+    If macOS still reports the app as quarantined, remove the quarantine attribute:
+
+      xattr -dr com.apple.quarantine /Applications/DBL.app
+
+    This removes Gatekeeper's downloaded-file quarantine flag for DBL.app.
+  EOS
 end
