@@ -1,6 +1,6 @@
 cask "dbl" do
-  version "0.1.5"
-  sha256 "b954446f1d7773de77484188d9ad7068868faddbfd5dbb608e449e2a1fa09ce1"
+  version "0.1.6"
+  sha256 "a422904c65de0ae2c17a804e3f1e34d887dbfb354d16fbb3c84dcc73fa2ad623"
 
   url "https://github.com/magalab/dbl/releases/download/v#{version}/dbl-#{version}-arm64.dmg"
   name "DBL"
